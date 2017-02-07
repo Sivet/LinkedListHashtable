@@ -29,9 +29,10 @@ namespace LinkedListHashtable
             Node ToRemove;
             Node Prev = hashtable[FindHashValue(data)];
 
-            if (Prev.Next == null && Prev.Data == data)
+            if (Prev.Data == data)
             {
-                hashtable[FindHashValue(data)] = null;
+                hashtable[FindHashValue(data)] = Prev.Next;
+                Prev.Next = null;
                 return true;
             }
             while (Prev != null)

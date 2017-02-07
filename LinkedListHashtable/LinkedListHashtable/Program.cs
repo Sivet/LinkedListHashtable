@@ -8,7 +8,7 @@ namespace LinkedListHashtable
 {
     class Program
     {
-        
+
         static void Main(string[] args)
         {
             HashTable Table = new HashTable();
@@ -22,7 +22,5 @@ namespace LinkedListHashtable
             Table.RemoveFromTable("jonathan");
             Table.RemoveFromTable("hunde");
         }
-       
-        
     }
 }
