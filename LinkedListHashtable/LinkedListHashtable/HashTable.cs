@@ -49,5 +49,16 @@ namespace LinkedListHashtable
             // Search for the data and delete it
             return false;
         }
+        internal Node Exists(string data)
+        {
+            Node temp = hashtable[FindHashValue(data)];
+            while (temp != null)
+            {
+                if (temp.Data.Equals(data))
+                    return temp;
+                temp = temp.Next;
+            }
+            return null;
+        }
     }
 }
